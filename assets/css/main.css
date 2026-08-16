@@ -571,6 +571,9 @@
 }
 
 @media (min-width:769px) {
+    .section04 .section04-inner {
+        min-height:860px;
+    }
     .section04 .section04-inner .section04-cont:hover {
         transform:translateY(20px);
     }
