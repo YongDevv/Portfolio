@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCursor(); // 커스텀 마우스 커서
     initIntroAnimation(); // 초기 화면 애니메이션
     initScrollAnimation(); // 스크롤 애니메이션
+    initAnchorScroll(); // ScrollSmoother 앵커 이동
 
     // 사용자가 모션 감소를 설정한 경우, 모든 GSAP 효과를 실행 X
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -21,23 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         document.body.classList.add("has-smoother");
     }
-
-    // 기본 앵커 이동 대신 ScrollSmoother를 이용해 메뉴 위치로 이동
-    document.querySelectorAll('a[href^="#"]').forEach((link) => {
-        link.addEventListener("click", (event) => {
-            const target = document.querySelector(link.getAttribute("href"));
-            if (!target) return;
-            event.preventDefault();
-
-            if (smoother) {
-                smoother.scrollTo(target, true, "top top");
-            } else {
-                target.scrollIntoView({ behavior: "smooth" });
-            }
-
-            window.history.pushState(null, "", link.getAttribute("href"));
-        });
-    });
 });
 
 // 헤더 스크롤 시 클래스 추가
@@ -105,4 +89,27 @@ function initScrollAnimation() {
 
     // Section 04
     scrollAnimation(".section04-title, .section04-cont strong, .section04-cont .section04-desc", { stagger: 0.12 });
+}
+
+// 기본 앵커 이동 대신 ScrollSmoother를 이용해 메뉴 위치로 이동
+function initAnchorScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const href = link.getAttribute("href");
+            if (!href || href === "#") return;
+
+            const target = document.querySelector(href);
+            if (!target) return;
+
+            event.preventDefault();
+
+            if (smoother) {
+                smoother.scrollTo(target, true, "top top");
+            } else {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+
+            window.history.pushState(null, "", href);
+        });
+    });
 }
