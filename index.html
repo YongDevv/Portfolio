@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="웹 퍼블리셔 신용철의 포트폴리오" />
+    <title>신용철 — Web Publisher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="inner">
+        <h1 class="site-logo">
+          <a href="#home">YONG<span class="text-accent">.</span></a>
+        </h1>
+        <nav aria-label="주요 메뉴">
+          <ul class="site-nav">
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#work">Work</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- smooth-wrapper -->
+    <div id="smooth-wrapper">
+      <!-- smooth-content -->
+      <div id="smooth-content">
+
+        <main id="main-content">
+          <section id="home" class="section01">
+            <h2 class="blind">웹 퍼블리셔 신용철 포트폴리오</h2>
+            <div>
+              <p class="section01-label">신용철 <span class="text-accent">웹 퍼블리셔</span></p>
+              <p class="section01-title">YONG<span class="text-accent">.</span><br /><span>PORTFOLIO</span></p>
+              <p class="section01-desc">디자인의 의도를 이해하고, <br class="tView">코드와 움직임으로 경험을 구현합니다.</p>
+            </div>
+            <a class="section01-link" data-cursor="WORK" href="#work">참여 프로젝트 보기 <span aria-hidden="true">↓</span></a>
+
+            <!-- 메인화면 오브젝트 -->
+            <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+              <filter id="hero-blob-goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="blur" />
+                <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 24 -10"
+                  result="goo"
+                />
+              </filter>
+            </svg>
+            <div class="hero-blob" aria-hidden="true">
+              <div class="hero-blob-halo"></div>
+              <div class="hero-blob-wrap">
+                <div class="hero-blob-shape hero-blob-shape-cyan"></div>
+                <div class="hero-blob-shape hero-blob-shape-magenta"></div>
+                <div class="hero-blob-shape hero-blob-shape-blue"></div>
+              </div>
+            </div>
+            <!-- // 메인화면 오브젝트 -->
+          </section>
+
+          <section id="about" class="section02">
+            <h2 class="blind">소개</h2>
+            <div class="section02-inner">
+              <p class="section02-title">ABOUT<span class="text-accent">.</span></p>
+              <div class="section02-cont">
+                <figure class="section02-profile">
+                  <img src="./assets/images/img-profile.png.png" alt="프로필 사진">
+                </figure>
+                <div class="section02-info">
+                  <strong>Hi, I'm Yong!</strong>
+                  <p>안녕하세요. <br class="mView">웹 디자인 2년 9개월, 웹 퍼블리셔 5년 차 신용철입니다.<br>디자인의 의도를 이해하고, 이를 바탕으로 사용성과 완성도를 높이는 UX/UI를 구현하는 데 강점이 있습니다.</p>
+                  <p>다양한 정부·공공 프로젝트를 경험하며 방대한 정보를 체계적인 구조로 정리하고, <br class="mNone">복잡한 요구사항을 안정적인 웹으로 구현해왔습니다.</p>
+                  <p>반응형 웹과 웹 접근성을 고려한 퍼블리싱 및 접근성 심사 대응 경험을 갖추고 있으며, <br class="mNone">개발자와 적극적으로 소통하며 구현 과정의 이슈를 조율해왔습니다. <br class="mNone">또한 내부망과 같은 제한적인 작업 환경에서도 유연하게 대응하며 프로젝트를 수행해왔습니다.</p>
+                  <p>맡은 업무를 끝까지 책임지고 프로젝트를 안정적으로 마무리하는 것을 중요하게 생각합니다.</p>
+                  <a href="" class="btn-more">
+                    자기소개 더보기
+                    <svg class="ico-more" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
+                        <path d="M17 14L23 20L17 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="work" class="section03">
+            <h2 class="blind">참여 프로젝트</h2>
+            <div class="section03-heading">
+              <p class="section03-title">WORK<span class="text-accent">.</span></p>
+              <p class="heading-copy">프로젝트를 누르시면 Notion에서 프로젝트 상세 내용을 확인할 수 있습니다.</p>
+            </div>
+
+            <div class="project-list">
+              <a class="project-card" data-cursor="VIEW" href="https://www.notion.so" target="_blank">
+                <div class="project-meta">
+                  <span>01</span>
+                  <em>WEB</em>
+                </div>
+                <div class="project-visual">
+                  <img src="./assets/images/temp-thumb-01.jpg" alt="">
+                </div>
+                <div class="project-footer">
+                  <p>Responsive Web · Cross-Browsing</p>
+                  <strong>중앙노동위원회 유지보수</strong>
+                </div>
+              </a>
+
+              <a class="project-card" data-cursor="VIEW" href="https://www.notion.so" target="_blank">
+                <div class="project-meta">
+                  <span>02</span>
+                  <em>WEB</em>
+                </div>
+                <div class="project-visual">
+                  <img src="./assets/images/temp-thumb-02.jpg" alt="">
+                </div>
+                <div class="project-footer">
+                  <p>Vue · Responsive Web</p>
+                  <strong>안전보건공단 종합포털 구축</strong>
+                </div>
+              </a>
+
+              <a class="project-card" data-cursor="VIEW" href="https://www.notion.so" target="_blank">
+                <div class="project-meta">
+                  <span>03</span>
+                  <em>WEB</em>
+                </div>
+                <div class="project-visual">
+                  <img src="./assets/images/temp-thumb-03.jpg" alt="">
+                </div>
+                <div class="project-footer">
+                  <p>Web Publishing</p>
+                  <strong>한국중소벤처기업유통원 모바일 및 관리자 구축</strong>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section id="contact" class="section04">
+            <h2 class="blind">Contact</h2>
+            <!-- section04-inner -->
+            <div class="section04-inner">
+              <p class="section04-title">CONTACT<span class="text-accent">.</span></p>
+              <!-- section04-cont -->
+              <div class="section04-cont">
+                <figure class="object-heart">
+                  <img src="./assets/images/ico-heart.png" alt="">
+                </figure>
+                <strong>새로운 이야기를<br />함께 <a href="mailto:kah3721@gmail.com">만들어요.</a></strong>
+                <p class="section04-desc">저에게 궁금한 점이 있으신가요? <br>메일을 보내주시면 빠른 시일 내에 답장을 드릴게요.</p>
+                <span class="email">kah3721@gmail.com</span>
+              </div>
+              <!-- // section04-cont -->
+            </div>
+            <!-- // section04-inner -->
+            <div class="bg-marquee">
+              <div class="marquee-line01">YONG YONG YONG YONG YONG YONG YONG YONG YONG</div>
+              <div class="marquee-line02">YONG YONG YONG YONG YONG YONG YONG YONG YONG</div>
+              <div class="marquee-line03">YONG YONG YONG YONG YONG YONG YONG YONG YONG</div>
+              <div class="marquee-line04">YONG YONG YONG YONG YONG YONG YONG YONG YONG</div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="footer">
+          <p>© 2026 YONG.</p><a href="#home">TOP ↑</a>
+        </footer>
+      </div>
+      <!-- // smooth-content -->
+    </div>
+    <!-- // smooth-wrapper -->
+    <div class="cursor" aria-hidden="true"><span></span></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollSmoother.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/hero-blob.js"></script>
+  </body>
+</html>

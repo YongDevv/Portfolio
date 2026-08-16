@@ -1,0 +1,81 @@
+.header .inner,
+.section01,
+.section03,
+.footer {
+    width: min(100% - 48px, 1280px);
+    margin-inline: auto;
+}
+
+@media (max-width:768px) {
+    .header .inner,
+    .section01,
+    .section03,
+    .footer {
+        width: min(100% - 40px, 1280px);
+    }
+}
+
+/* 헤더 */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: top .5s ease;
+}
+
+.header.is-fixed {
+    top: 16px;
+}
+
+.header .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    transition: all .5s ease;
+}
+
+.header.is-fixed .inner {
+    padding-inline: 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+}
+
+.header.is-fixed .nav-link:hover {
+    color: #4d6bff;
+}
+
+.site-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-logo a {
+    font: 800 24px/1 var(--font-en);
+    letter-spacing: -0.05em;
+}
+
+/* 헤더 네비게이션 */
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 700 16px var(--font-body);
+}
+
+.nav-link:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width:700px) {
+    .site-nav {
+        gap: 14px;
+    }
+}
