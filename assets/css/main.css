@@ -282,8 +282,10 @@
 
 .section03 .section03-heading {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
+    gap:8px;
     margin-bottom: 40px;
 }
 
@@ -394,6 +396,12 @@
     .section03 .project-visual {
         aspect-ratio: 1 / 0.8;
         height: unset;
+    }
+}
+
+@media (max-width:768px) {
+    .section03 .section03-heading .heading-copy {
+        width:100%;
     }
 }
 

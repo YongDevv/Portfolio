@@ -20,7 +20,7 @@
 		url("../fonts/PretendardGOV-Bold.woff") format('woff'),
 }
 @font-face {
-    font-family: "Hey August";
+    font-family:"Hey August";
     font-style:normal;
     font-weight:400;
     src: url("../fonts/HeyAugust.ttf") format("truetype");
