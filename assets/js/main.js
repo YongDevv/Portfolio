@@ -3,26 +3,30 @@ document.addEventListener("DOMContentLoaded", () => {
     initCursor(); // 커스텀 마우스 커서
     initIntroAnimation(); // 초기 화면 애니메이션
     initScrollAnimation(); // 스크롤 애니메이션
+    initSmoothScroll(); // ScrollSmoother 적용
     initAnchorScroll(); // ScrollSmoother 앵커 이동
-
+    
     // 사용자가 모션 감소를 설정한 경우, 모든 GSAP 효과를 실행 X
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reducedMotion || !window.gsap) return;
     gsap.registerPlugin(ScrollTrigger);
-
-    // 데스크톱에서만 ScrollSmoother(부드러운 관성 스크롤)을 적용
-    let smoother;
-
-    if (window.ScrollSmoother) {
-        gsap.registerPlugin(window.ScrollSmoother);
-        smoother = window.ScrollSmoother.create({
-            smooth: 0.8,
-            smoothTouch: 0,
-            effects: false
-        });
-        document.body.classList.add("has-smoother");
-    }
 });
+
+let smoother;
+// 데스크톱에서만 ScrollSmoother(부드러운 관성 스크롤)을 적용
+function initSmoothScroll() {
+    if (!window.ScrollSmoother) return;
+
+    gsap.registerPlugin(window.ScrollSmoother);
+
+    smoother = window.ScrollSmoother.create({
+        smooth: 0.8,
+        smoothTouch: 0,
+        effects: false
+    });
+
+    document.body.classList.add("has-smoother");
+}
 
 // 헤더 스크롤 시 클래스 추가
 function initHeader() {
