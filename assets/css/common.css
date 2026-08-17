@@ -20,10 +20,11 @@
 		url("../fonts/PretendardGOV-Bold.woff") format('woff'),
 }
 @font-face {
-    font-family:"Hey August";
-    font-style:normal;
-    font-weight:400;
-    src: url("../fonts/HeyAugust.ttf") format("truetype");
+    font-family: "Hey August";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/HeyAugust.woff2") format("woff2");
 }
 
 :root {
