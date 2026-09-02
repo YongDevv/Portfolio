@@ -382,6 +382,14 @@
 }
 
 @media (min-width:601px) and (max-width:1024px) {
+    .section03 .project-card {
+        border-left: 1px solid var(--ink);
+    }
+
+    .section03 .project-card:nth-child(even) {
+        border-left: 0;
+    }
+
     .section03 .project-card:nth-child(n+3) {
         border-top: 0;
     }
@@ -410,12 +418,12 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .section03 .project-card {
-        border-left: 1px solid var(--ink);
-    }
-
     .section03 .project-card:nth-child(n+2) {
         border-top: 0;
+
+    }
+    .section03 .project-card:nth-child(even) {
+        border-left: 1px solid var(--ink);
     }
 }
 
