@@ -157,6 +157,7 @@
     gap: 80px;
     padding-block: clamp(80px, 10.4vw, 200px);
     width: min(100% - 48px, 1280px);
+    min-height: 100dvh;
     margin: auto;
 }
 
