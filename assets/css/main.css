@@ -155,7 +155,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 80px;
-    padding-block: clamp(80px, 8.3vw, 160px);
+    padding-block: clamp(80px, 10.4vw, 200px);
     width: min(100% - 48px, 1280px);
     margin: auto;
 }
