@@ -81,6 +81,9 @@
     opacity: 1;
 }
 
+/* 콘텐츠 */
+#main-content {overflow:hidden;}
+
 /* section 01 - 메인 비주얼 */
 .section01 {
     position: relative;
